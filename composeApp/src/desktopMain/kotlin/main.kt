@@ -5,7 +5,7 @@ import screens.Home
 fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
-        title = "heroesofcode-desktop",
+        title = "Heroes Of Code - Open Source",
     ) {
         Home()
     }

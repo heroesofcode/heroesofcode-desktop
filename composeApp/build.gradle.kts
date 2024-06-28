@@ -19,6 +19,7 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            api("io.github.qdsfdhvh:image-loader:1.8.1")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
