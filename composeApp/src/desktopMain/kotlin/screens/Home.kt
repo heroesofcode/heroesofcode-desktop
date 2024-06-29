@@ -3,6 +3,7 @@ package screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -51,6 +52,26 @@ fun Home() {
                     fontWeight = FontWeight.Light,
                     modifier = Modifier.padding(20.dp, 2.dp, 0.dp, 0.dp)
                 )
+
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(20.dp)
+                ) {
+                    Text(
+                        "Followers: 2",
+                        fontSize = 14.sp,
+                        color = Color.Gray,
+                        fontWeight = FontWeight.Light,
+                    )
+
+                    Spacer(modifier = Modifier.width(8.dp))
+
+                    Text(
+                        "Following: 0",
+                        fontSize = 14.sp,
+                        color = Color.Gray,
+                        fontWeight = FontWeight.Light,
+                    )
+                }
             }
         }
     }
