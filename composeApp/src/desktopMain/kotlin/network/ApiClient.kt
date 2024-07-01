@@ -12,11 +12,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 
 class ApiClient(private val client: HttpClient) {
 
-    suspend fun getInfo(): Flow<InfoDTO> {
-        val info = client
-            .get("https://api.github.com/orgs/heroesofcode")
-            .body<InfoDTO>()
-
-        return MutableStateFlow(info)
+    suspend fun getInfo(): InfoDTO {
+        return client.get("https://api.github.com/orgs/heroesofcode")
+            .body()
     }
 }
