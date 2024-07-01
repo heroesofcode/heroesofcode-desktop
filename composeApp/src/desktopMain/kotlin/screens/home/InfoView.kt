@@ -23,7 +23,7 @@ import dto.InfoDTO
 fun InfoView(data: InfoDTO) {
 
     Image(
-        painter = rememberImagePainter("${data.avatar_url}"),
+        painter = rememberImagePainter("${data.avatarUrl}"),
         contentDescription = null,
         modifier = Modifier.width(100.dp).height(100.dp),
         contentScale = ContentScale.Crop
