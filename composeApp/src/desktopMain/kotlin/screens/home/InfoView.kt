@@ -17,6 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.seiko.imageloader.rememberImagePainter
+import composeResources.Strings
 import dto.InfoDTO
 
 @Composable
@@ -52,7 +53,7 @@ fun InfoView(data: InfoDTO) {
             modifier = Modifier.fillMaxWidth().padding(20.dp)
         ) {
             Text(
-                "Followers: ${data.followers}",
+                "${Strings.FOLLOWERS} ${data.followers}",
                 fontSize = 14.sp,
                 color = Color.Gray,
                 fontWeight = FontWeight.Light,
@@ -61,7 +62,7 @@ fun InfoView(data: InfoDTO) {
             Spacer(modifier = Modifier.width(8.dp))
 
             Text(
-                "Following: ${data.following}",
+                "${Strings.FOLLOWING} ${data.following}",
                 fontSize = 14.sp,
                 color = Color.Gray,
                 fontWeight = FontWeight.Light,
