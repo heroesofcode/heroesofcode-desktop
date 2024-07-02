@@ -12,6 +12,7 @@ repositories {
     mavenCentral()
     maven { url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/") }
     maven { url = uri("https://jitpack.io") }
+    maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
 }
 
 kotlin {
@@ -36,14 +37,23 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
 
                 implementation("io.insert-koin:koin-core:3.4.0")
-                // Removendo koin-compose e koin-androidx-compose
 
                 api("io.github.qdsfdhvh:image-loader:1.8.1")
             }
         }
+
         val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.currentOs)
+            }
+        }
+
+        val desktopTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+                implementation("io.mockk:mockk:1.13.11")
+                implementation("io.insert-koin:koin-test:3.4.0")
             }
         }
     }
