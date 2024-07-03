@@ -16,6 +16,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.heroesofcode.desktop.design_system.AppColors
 import com.seiko.imageloader.rememberImagePainter
 import composeResources.Strings
 import dto.InfoDTO
@@ -36,7 +37,7 @@ fun InfoView(data: InfoDTO) {
         Text(
             "${data.name}",
             fontSize = 30.sp,
-            color = Color.Black,
+            color = AppColors.title,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(20.dp, 0.dp, 0.dp, 0.dp)
         )
@@ -44,7 +45,7 @@ fun InfoView(data: InfoDTO) {
         Text(
             "${data.description}",
             fontSize = 16.sp,
-            color = Color.Black,
+            color = AppColors.subtitle,
             fontWeight = FontWeight.Light,
             modifier = Modifier.padding(20.dp, 2.dp, 0.dp, 0.dp)
         )
@@ -55,7 +56,7 @@ fun InfoView(data: InfoDTO) {
             Text(
                 "${Strings.FOLLOWERS} ${data.followers}",
                 fontSize = 14.sp,
-                color = Color.Gray,
+                color = AppColors.gray,
                 fontWeight = FontWeight.Light,
             )
 
@@ -64,7 +65,7 @@ fun InfoView(data: InfoDTO) {
             Text(
                 "${Strings.FOLLOWING} ${data.following}",
                 fontSize = 14.sp,
-                color = Color.Gray,
+                color = AppColors.gray,
                 fontWeight = FontWeight.Light,
             )
         }
