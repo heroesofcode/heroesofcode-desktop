@@ -21,6 +21,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation(project(":design-system"))
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)
