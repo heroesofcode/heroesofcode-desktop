@@ -1,6 +1,6 @@
 package viewmodel
 
-import base.UIState
+import UIState
 import dto.InfoDTO
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
