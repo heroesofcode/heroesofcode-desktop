@@ -43,15 +43,12 @@ fun Home(viewModel: InfoViewModel) {
                 isLoading -> {
                     CircularProgressIndicator()
                 }
-
                 data != null -> {
                     InfoView(data)
                 }
-
                 error != null -> {
                     Text("Error: ${error.message}")
                 }
-
                 else -> {
                     Text("No data")
                 }

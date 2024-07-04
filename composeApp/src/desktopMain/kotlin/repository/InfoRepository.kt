@@ -5,7 +5,7 @@ import network.ApiClient
 
 class InfoRepository(private val apiClient: ApiClient) {
 
-    suspend fun getInto(): Result<InfoDTO> {
+    suspend fun getInfo(): Result<InfoDTO> {
         return try {
             val info = apiClient.getInfo()
             Result.success(info)
