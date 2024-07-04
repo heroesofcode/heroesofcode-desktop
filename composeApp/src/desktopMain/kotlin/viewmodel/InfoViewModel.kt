@@ -20,7 +20,7 @@ class InfoViewModel(private val repository: InfoRepository) {
     fun fetchInfo() {
         viewModelScope.launch {
             _state.value = UIState(isLoading = true)
-            val result = repository.getInto()
+            val result = repository.getInfo()
 
             _state.value = if (result.isSuccess) {
                 UIState(data = result.getOrNull())
