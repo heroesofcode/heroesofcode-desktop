@@ -10,10 +10,8 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 
-class ApiClient(private val client: HttpClient) {
+const val BASE_URL = "https://api.github.com/orgs/heroesofcode"
 
-    suspend fun getInfo(): InfoDTO {
-        return client.get("https://api.github.com/orgs/heroesofcode")
-            .body()
-    }
+class ApiClient(private val client: HttpClient) {
+    suspend fun getInfo(): InfoDTO = client.get(BASE_URL).body()
 }
