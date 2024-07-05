@@ -10,7 +10,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import repository.InfoRepository
 
-class InfoViewModel(private val repository: InfoRepository) {
+class InfoViewModel(
+    private val repository: InfoRepository
+) {
 
     private val _state = MutableStateFlow(UIState<InfoDTO>())
     val state: StateFlow<UIState<InfoDTO>> = _state

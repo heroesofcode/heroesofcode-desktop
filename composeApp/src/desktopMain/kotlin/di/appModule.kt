@@ -21,7 +21,7 @@ val appModule: Module = module {
         }
     }
 
-    single { ApiClient(get()) }
-    single { InfoRepository(get()) }
-    single { InfoViewModel(get()) }
+    factory { ApiClient(get()) }
+    factory { InfoRepository(get()) }
+    factory { InfoViewModel(get()) }
 }

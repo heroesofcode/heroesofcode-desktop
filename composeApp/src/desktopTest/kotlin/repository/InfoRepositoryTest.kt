@@ -42,7 +42,7 @@ class InfoRepositoryTest : KoinTest {
 
         coEvery { apiClient.getInfo() } returns infoDTO
 
-        val result = repository.getInto()
+        val result = repository.getInfo()
 
         assertTrue(result.isSuccess)
         val info = result.getOrNull()
@@ -58,7 +58,7 @@ class InfoRepositoryTest : KoinTest {
     fun testFetchInfoFailure() = runTest {
         coEvery { apiClient.getInfo() } throws Exception("Network error")
 
-        val result = repository.getInto()
+        val result = repository.getInfo()
 
         assertTrue(result.isFailure)
         val exception = result.exceptionOrNull()

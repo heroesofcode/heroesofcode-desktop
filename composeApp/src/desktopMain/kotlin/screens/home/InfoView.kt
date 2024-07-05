@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -25,9 +26,9 @@ import dto.InfoDTO
 fun InfoView(data: InfoDTO) {
 
     Image(
-        painter = rememberImagePainter("${data.avatarUrl}"),
+        painter = rememberImagePainter(data.avatarUrl),
         contentDescription = null,
-        modifier = Modifier.width(100.dp).height(100.dp),
+        modifier = Modifier.size(100.dp),
         contentScale = ContentScale.Crop
     )
 
@@ -35,26 +36,36 @@ fun InfoView(data: InfoDTO) {
         modifier = Modifier.fillMaxWidth()
     ) {
         Text(
-            "${data.name}",
+            text = data.name,
             fontSize = 30.sp,
             color = AppColors.title,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(20.dp, 0.dp, 0.dp, 0.dp)
+            modifier = Modifier.padding(
+                start = 24.dp,
+                top = 2.dp,
+                end = 0.dp,
+                bottom = 0.dp
+            )
         )
 
         Text(
-            "${data.description}",
+            text = data.description,
             fontSize = 16.sp,
             color = AppColors.subtitle,
             fontWeight = FontWeight.Light,
-            modifier = Modifier.padding(20.dp, 2.dp, 0.dp, 0.dp)
+            modifier = Modifier.padding(
+                start = 24.dp,
+                top = 2.dp,
+                end = 0.dp,
+                bottom = 0.dp
+            )
         )
 
         Row(
-            modifier = Modifier.fillMaxWidth().padding(20.dp)
+            modifier = Modifier.fillMaxWidth().padding(24.dp)
         ) {
             Text(
-                "${Strings.FOLLOWERS} ${data.followers}",
+                text = "${Strings.FOLLOWERS} ${data.followers}",
                 fontSize = 14.sp,
                 color = AppColors.gray,
                 fontWeight = FontWeight.Light,
@@ -63,7 +74,7 @@ fun InfoView(data: InfoDTO) {
             Spacer(modifier = Modifier.width(8.dp))
 
             Text(
-                "${Strings.FOLLOWING} ${data.following}",
+                text = "${Strings.FOLLOWING} ${data.following}",
                 fontSize = 14.sp,
                 color = AppColors.gray,
                 fontWeight = FontWeight.Light,

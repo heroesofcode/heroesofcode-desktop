@@ -34,7 +34,7 @@ fun Home(viewModel: InfoViewModel) {
         viewModel.fetchInfo()
     }
     Column(
-        modifier = Modifier.fillMaxWidth().padding(20.dp)
+        modifier = Modifier.fillMaxWidth().padding(24.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth()

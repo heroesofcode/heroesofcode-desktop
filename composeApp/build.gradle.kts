@@ -39,7 +39,7 @@ kotlin {
                 implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.12")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
 
-                implementation("io.insert-koin:koin-core:3.4.0")
+                implementation("io.insert-koin:koin-core:3.6.0-Beta4")
 
                 api("io.github.qdsfdhvh:image-loader:1.8.1")
             }
